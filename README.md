@@ -78,15 +78,15 @@ docker run -p 3000:3000 --env-file .env api-conversao-moedas
 
 ## Endpoints
 ### Autenticação
-POST /auth/signup - Cadastra um novo usuário
-POST /auth/login - Realiza o login e retorna um token JWT
+- **POST /auth/signup**: Cadastra um novo usuário
+- **POST /auth/login**: Realiza o login e retorna um token JWT
 
 ### Moedas
-GET /currency/list - Lista todas as moedas disponíveis
-GET /currency/convert - Converte um valor entre moedas
-Parâmetros: from, to, amount
-POST /currency - Registra uma nova moeda
-Parâmetros: code, rate
+- **GET /currency/list**: Lista todas as moedas disponíveis
+- **GET /currency/convert**: Converte um valor entre moedas  
+  Parâmetros: `from`, `to`, `amount`
+- **POST /currency**: Registra uma nova moeda  
+  Parâmetros: `code`, `rate`
 
 ## Segurança
 Todos os endpoints de moedas exigem autenticação via JWT. O token deve ser enviado no cabeçalho Authorization no formato:
